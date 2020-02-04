@@ -11,6 +11,7 @@ these files should contain your username, password and the Meraki hostname that 
 Create a file routes in that directory that contain the CIDRs that are routed via the VPN. One per line.
 
 ::
+
         apt-get install -y strongswan xl2tpd
         mkdir -p ~/.config/meraki-vpn/default
         echo "martinslabber" > ~/.config/meraki-vpn/default/username
@@ -23,7 +24,8 @@ This secret is stored in the file named ipsec.secret and should have the followi
 Replace AAAA with the shared secret. Keep the "'s.
 
 ::
-        : PSK "AAAA"
+
+         : PSK "AAAA"
 
 Based on
 https://gist.github.com/psanford/42c550a1a6ad3cb70b13e4aaa94ddb1c
